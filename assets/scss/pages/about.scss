@@ -24,12 +24,7 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
-                // display: grid;
-                // grid-template-columns: 1fr 1fr 1fr;
-                // grid-template-rows: 1fr;
-                // gap: 0em 0em;
-                // grid-auto-flow: row;
-                // grid-template-areas: ". . .";
+                overflow: hidden;
 
                 &_item {
                     flex-basis: 100%;
@@ -43,12 +38,20 @@
                     color: $transparent;
                     text-stroke: 2px $black;
                     -webkit-text-stroke: 2px $black;
-                    
+
                     &:nth-child(2) {
                         color: $black;
                         text-stroke: 2px $black;
                         -webkit-text-stroke: 2px $black;
                     }
+                }
+            }
+
+            &-info {
+                display: flex;
+                
+                &_item {
+                    border: 1px solid $black;
                 }
             }
         }
@@ -63,19 +66,16 @@
         margin: $grid-gap 0;
 
         .copartnership {
+            width: 100%;
 
             &-content {
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
-                // display: grid;
-                // grid-template-columns: 1fr 1fr 1fr;
-                // grid-template-rows: 1fr;
-                // gap: 0em 0em;
-                // grid-auto-flow: row;
-                // grid-template-areas: ". . .";
+                overflow: hidden;
 
                 &_item {
+                    flex-basis: 100%;
                     font-size: 42px;
                     line-height: 42px;
                     letter-spacing: $base-letter_spacing;
@@ -86,8 +86,10 @@
                     color: $transparent;
                     text-stroke: 2px $black;
                     -webkit-text-stroke: 2px $black;
-                    
-                    &:nth-child(1), &:nth-child(3){
+                    flex-basis: 50%;
+
+                    &:nth-child(1),
+                    &:nth-child(3) {
                         color: $black;
                         text-stroke: 2px $black;
                         -webkit-text-stroke: 2px $black;

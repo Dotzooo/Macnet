@@ -40,6 +40,19 @@ const about = ref(null)
             Service
           </span>
         </div>
+        <div class="service-info">
+          <div class="service-info_item">
+            <h3>專案開發</h3>
+          </div>
+          <div class="service-info_item">
+            <!-- <h3>技術支援</h3>
+            <h5>應業務合作夥伴對各種WEB系統和服務器開發的要求，我們將在適當的工程師指定的位置提供開發支持。</h5>
+            <h4>最佳IT環境</h4>
+            <h5>利用我們迄今為止積累的經驗和專業知識，將為廣泛的行業提供最佳的IT環境。</h5>
+            <h4>廣闊的領域和能力</h4>
+            <h5>我們公司聚集了活躍在金融和各行業等廣泛領域的工程師，我們接受C＃，.net，Java，React，Vue，Android Java，IOS多語言等開發語言，因此從基礎架構到應用程序開發的最佳選擇 我們可以提供出色的工程師。</h5> -->
+          </div>
+        </div>
       </section>
     </article>
 
