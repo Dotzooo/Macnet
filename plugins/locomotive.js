@@ -1,11 +1,10 @@
-// import LocomotiveScroll from 'locomotive-scroll'
-// import 'locomotive-scroll/dist/locomotive-scroll.css'
+import LocomotiveScroll from 'locomotive-scroll'
+import Vue from 'vue'
 
-// import LocomotiveScroll from 'locomotive-scroll'
+function install () {
+  Object.defineProperty(Vue.prototype, 'LocomotiveScroll', {
+    value: LocomotiveScroll
+  })
+}
 
-// const scroll = new LocomotiveScroll({
-//   el: document.querySelector('[data-scroll-container]'),
-//   smooth: true
-// })
-
-// export default scroll
+install()

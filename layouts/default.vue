@@ -1,6 +1,5 @@
 <script setup>
-import { ref, onMounted, provide } from 'vue'
-
+import Vue, { ref, onMounted, provide } from 'vue'
 // import { gsap } from 'gsap'
 // import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 // import LocomotiveScroll from 'locomotive-scroll'
@@ -40,10 +39,24 @@ function onSroll () {
   // locoScroll.on('scroll', ScrollTrigger.update)
 }
 
+function onScollV2 () {
+  const scrollContainerDom = scrollContainer.value
+  const scroller = new Vue.prototype.LocomotiveScroll({
+    el: scrollContainerDom,
+    smooth: true
+    // multiplier: 0.1
+  })
+
+  // on scroll event
+  scroller.on('scroll', (args) => {
+    // console.log(args)
+  })
+}
+
 onMounted(() => {
   onSroll()
+  onScollV2()
 })
-
 </script>
 
 <template>
