@@ -1,0 +1,60 @@
+@font-face {
+    font-family: "TESLA";
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url("assets/fonts/TESLA.ttf");
+}
+
+.text-transparent {
+    font-size: 1px;
+    color: $transparent;
+}
+
+
+h1 {
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: $base-letter_spacing;
+    font-weight: $font-weight_base;
+}
+
+h2 {
+    font-size: 28px;
+    line-height: 28px;
+    letter-spacing: $base-letter_spacing;
+    font-weight: $font-weight_base;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: $font-weight_base;
+}
+
+h4 {
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: $font-weight_base;
+}
+
+h5 {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: $font-weight_base;
+}
+
+h6 {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: $font-weight_base;
+}
+
+// @include Mobile {
+// }
+// @include Tablet {
+// }
+// @include Laptop {
+// }
+// @include Desktop {
+// }

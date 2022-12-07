@@ -1,0 +1,36 @@
+// RWD 裝置寬度
+
+// XX-Large devices (larger desktops, 1400px and up);
+// @mixin XXL {
+//     @media (min-width: 1400px) {
+//         @content
+//     }
+// }
+
+// X-Large devices (large desktops, 1200px and up);
+@mixin Desktop {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@mixin Laptop {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@mixin Tablet {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@mixin Mobile {
+    @media (min-width: 576px) {
+        @content;
+    }
+}

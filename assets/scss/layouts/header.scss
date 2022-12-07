@@ -1,0 +1,264 @@
+.header {
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 2vh;
+
+  &-logo {
+    position: fixed;
+    color: $red;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 5px;
+    z-index: 99;
+  }
+
+  // menu toggle Button
+  .toggle-btn {
+    position: fixed;
+    margin: 5px;
+    padding: 15px;
+    width: 40px;
+    height: 12px;
+    top: 0;
+    right: 0;
+    z-index: 1;
+
+    &_one,
+    &_two {
+      position: absolute;
+      width: 40px;
+      height: 2px;
+      background: $red;
+    }
+
+    &_two {
+      margin-top: 12px;
+    }
+  }
+
+  .menu {
+    height: 100vh;
+    width: 100%;
+    background-color: $black;
+    z-index: 0;
+    position: fixed;
+    top: -100%;
+    left: 0%;
+
+    &-content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      &_list {
+        list-style: none;
+
+        li {
+          margin-bottom: 30px;
+
+          a {
+            color: $white;
+            font-size: 24px;
+            line-height: $base-line_height;
+            letter-spacing: $base-letter_spacing;
+          }
+        }
+      }
+
+      &_info {
+        padding-left: 30px;
+
+        h3 {
+          color: $white;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  // .menu {
+  //   height: 30px;
+  //   width: 100%;
+  //   position: absolute;
+  //   right: -200vw;
+  //   display: flex;
+  //   justify-content: space-evenly;
+  //   align-items: flex-end;
+  //   background: $black;
+
+  //   .close-btn {
+  //     width: 30px;
+  //     height: 30px;
+  //     position: absolute;
+  //     top: 4%;
+  //     right: 3%;
+  //     cursor: pointer;
+  //     opacity: 0;
+  //     pointer-events: none;
+
+  //     &:hover {
+  //       div::after,
+  //       div::before {
+  //         background: $red;
+  //       }
+  //     }
+
+  //     &_bars {
+  //       &::before,
+  //       &::after {
+  //         content: "";
+  //         position: absolute;
+  //         width: 30px;
+  //         height: 4px;
+  //         background: $white;
+  //         transition: background $base-duration $base-timing;
+  //       }
+
+  //       &::before {
+  //         transform: rotate(-45deg);
+  //       }
+
+  //       &::after {
+  //         transform: rotate(45deg);
+  //       }
+  //     }
+  //   }
+
+  //   &-content {
+  //     height: 100%;
+  //     display: flex;
+  //     flex-direction: column-reverse;
+  //     justify-content: center;
+
+  //     .overlay {
+  //       display: none;
+  //     }
+
+  //     // &_info {
+
+  //     //   h3 {
+  //     //     color: $white;
+  //     //     opacity: 0;
+  //     //   }
+  //     // }
+
+  //     // &_list {
+  //     //   padding-left: 0;
+
+  //     //   li {
+  //     //     margin: 18px 0;
+
+  //     //     a {
+  //     //       color: $white;
+  //     //       font-size: 20px;
+  //     //       text-decoration: none;
+  //     //       font-weight: 500;
+  //     //       position: relative;
+  //     //       opacity: 0;
+  //     //       pointer-events: none;
+
+  //     //       &:after {
+  //     //         content: "";
+  //     //         width: 100%;
+  //     //         position: absolute;
+  //     //         height: 3px;
+  //     //         border-radius: 5px;
+  //     //         background: $white;
+  //     //         bottom: -10px;
+  //     //         left: 0;
+  //     //         transform-origin: left;
+  //     //         transition: transform $base-duration $base-timing;
+  //     //         transform: scaleX(0);
+  //     //       }
+
+  //     //       &:hover:after {
+  //     //         transform: scaleX(1);
+  //     //       }
+  //     //     }
+  //     //   }
+  //     // }
+  //   }
+  // }
+}
+
+@include Mobile {
+  .header {
+  }
+}
+@include Tablet {
+  .header {
+    .menu {
+      align-items: center;
+
+      &-content {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+
+        // TODO: 可能移除
+        &_info {
+          display: flex;
+          flex-direction: column;
+        }
+
+        &_list {
+          li {
+            margin: 30px 0;
+          }
+        }
+      }
+    }
+  }
+}
+@include Laptop {
+  .header {
+  }
+}
+@include Desktop {
+  .header {
+    justify-content: space-between;
+
+    &_logo {
+    }
+
+    .menu-btn {
+      align-items: center;
+
+      .bars {
+        width: 30px;
+
+        &::before,
+        &::after {
+          width: 30px;
+        }
+      }
+    }
+
+    .menu {
+      .close-btn {
+        top: 6%;
+      }
+
+      &-content {
+        &_info {
+          margin-bottom: 4%;
+        }
+      }
+    }
+  }
+}
+// @include XXL {
+//   .menu {
+//     &-content {
+//       width: 100%;
+//       display: flex;
+//       justify-content: space-evenly;
+//       margin-bottom: 3%;
+//     }
+//   }
+// }

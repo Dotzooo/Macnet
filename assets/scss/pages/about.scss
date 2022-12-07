@@ -1,0 +1,187 @@
+.about {
+    height: 100vh;
+    width: 100vw;
+    background-size: 40px 80px;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: $base-background;
+    background-image: linear-gradient($base-background_line 1px, transparent 1px),
+        linear-gradient(to right, $base-background_line 1px, $base-background 1px);
+    // box-sizing: content-box;/
+
+    .service-wrapper {
+        .service {
+            &-title {
+                padding: 25px;
+
+                h3,
+                h4 {
+                    display: inline-block;
+                }
+            }
+
+            &-content {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                // display: grid;
+                // grid-template-columns: 1fr 1fr 1fr;
+                // grid-template-rows: 1fr;
+                // gap: 0em 0em;
+                // grid-auto-flow: row;
+                // grid-template-areas: ". . .";
+
+                &_item {
+                    flex-basis: 100%;
+                    font-size: 42px;
+                    line-height: 42px;
+                    letter-spacing: $base-letter_spacing;
+                    border-top: 1px solid $black;
+                    border-bottom: 1px solid $black;
+                    padding: 25px;
+                    text-align: center;
+                    color: $transparent;
+                    text-stroke: 2px $black;
+                    -webkit-text-stroke: 2px $black;
+                    
+                    &:nth-child(2) {
+                        color: $black;
+                        text-stroke: 2px $black;
+                        -webkit-text-stroke: 2px $black;
+                    }
+                }
+            }
+        }
+    }
+
+    .copartnership-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: $grid-gap;
+        margin: auto;
+        min-width: 100vw;
+        margin: $grid-gap 0;
+
+        .copartnership {
+
+            &-content {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                // display: grid;
+                // grid-template-columns: 1fr 1fr 1fr;
+                // grid-template-rows: 1fr;
+                // gap: 0em 0em;
+                // grid-auto-flow: row;
+                // grid-template-areas: ". . .";
+
+                &_item {
+                    font-size: 42px;
+                    line-height: 42px;
+                    letter-spacing: $base-letter_spacing;
+                    border-top: 1px solid $black;
+                    border-bottom: 1px solid $black;
+                    padding: 25px;
+                    text-align: center;
+                    color: $transparent;
+                    text-stroke: 2px $black;
+                    -webkit-text-stroke: 2px $black;
+                    
+                    &:nth-child(1), &:nth-child(3){
+                        color: $black;
+                        text-stroke: 2px $black;
+                        -webkit-text-stroke: 2px $black;
+                    }
+                }
+            }
+
+            .marquee {
+                display: flex;
+                overflow: hidden;
+                margin: $grid-gap 0;
+                user-select: none;
+                gap: $grid-gap;
+                mask-image: linear-gradient(
+                    to right,
+                    hsl(0 0% 0% / 0),
+                    hsl(0 0% 0% / 1) 20%,
+                    hsl(0 0% 0% / 1) 80%,
+                    hsl(0 0% 0% / 0)
+                );
+                -webkit-mask-image: linear-gradient(
+                    to right,
+                    hsl(0 0% 0% / 0),
+                    hsl(0 0% 0% / 1) 20%,
+                    hsl(0 0% 0% / 1) 80%,
+                    hsl(0 0% 0% / 0)
+                );
+
+                &-group {
+                    flex-shrink: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    gap: $grid-gap;
+                    min-width: 100%;
+                    animation: scroll-x 60s linear infinite;
+                }
+
+                svg {
+                    display: grid;
+                    place-items: center;
+                    width: clamp(10rem, 1rem + 40vmin, 30rem);
+                    fill: navy;
+                    background: #ecdcc0;
+                    aspect-ratio: 16/9;
+                    padding: calc(clamp(10rem, 1rem + 40vmin, 30rem) / 10);
+                    border-radius: 0.5rem;
+                }
+            }
+            .marquee-reverse {
+                .marquee-group {
+                    animation-direction: reverse;
+                    animation-delay: -3s;
+                }
+            }
+        }
+    }
+}
+
+@keyframes scroll-x {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-100% - $grid-gap));
+    }
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0em 0em;
+    grid-auto-flow: row;
+    grid-template-areas: ". . .";
+
+    .grid-item {
+        font-size: 42px;
+        line-height: 42px;
+        letter-spacing: $base-letter_spacing;
+        border-top: 1px solid $black;
+        border-bottom: 1px solid $black;
+        padding: 25px;
+        text-align: center;
+        color: $transparent;
+        text-stroke: 2px $black;
+        -webkit-text-stroke: 2px $black;
+
+        &:nth-child(2) {
+            color: $black;
+            text-stroke: 2px $black;
+            -webkit-text-stroke: 2px $black;
+        }
+
+        //     grid-area: 1 / 1 / 2 / 6;
+    }
+}

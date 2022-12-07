@@ -1,0 +1,49 @@
+// Typography
+$base-font_family: "TESLA";
+
+// Font Size
+$browser-default-font_size: 14px;
+$base-font_size: 14px;
+
+
+
+// Line Height
+$base-line_height: 14px;
+
+// Letter Spacing
+$base-letter_spacing: 10px;
+
+// Font Weight
+$font-weight_base: normal;
+$font-weight_bold: bold;
+
+// Colors
+$white: #fff;
+$black: #000;
+$dark-gray: #656565;
+$red: #c10a28;
+$gray: #d5d5d5;
+$transparent: transparent;
+// #f6ded7;
+$purple: #300a6e;
+$blue: #0b00cf;
+$dark-blue: #1736f5;
+$green: #c0ff6b;
+$yellow: #ffc709;
+$FAUX-CHARLESTON-GREEN: #1f2b37;
+$FAUX-MEDIUM-AQUAMARINE: #77f2a1;
+$FAUX-MEDIUM-JUNGLE-GREEN: #17312c;
+$FAUX-BITTERSWEET: #f2735b;
+
+// Grid gap
+$grid-gap: calc(clamp(10rem, 1rem + 40vmin, 30rem) / 14);
+
+// Background
+$base-background: $white;
+$base-background_line: #eef1f4;
+
+// Animations
+$base-duration: 0.5s;
+$base-timing: ease;
+
+$base-scale: 1.4;

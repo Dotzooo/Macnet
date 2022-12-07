@@ -1,0 +1,19 @@
+@use "sass:math";
+
+@import '/assets/scss/pages/index.scss';
+@import '/assets/scss/pages/about.scss';
+
+html {
+    font-size: $browser-default-font-size;
+    line-height: $base-line_height;
+    font-weight: $font-weight_base;
+}
+
+body {
+    position: relative;
+    height: 100%;
+    font-family: TESLA, 微軟正黑體, sans-serif;
+    font-size: $base-font_size;
+    // overflow: hidden;
+    box-sizing: content-box;
+}

@@ -1,0 +1,30 @@
+.background {
+    z-index: 1;
+
+    .background-text {
+        // display: inline-block;
+        position: fixed;
+        top: 40vh;
+        // padding-left: 180vw;
+        font-size: 20vh;
+        line-height: 20vh;
+        text-transform: uppercase;
+        white-space: nowrap;
+        overflow: hidden;
+        color: $red;
+        animation: stream-title 10s infinite linear;
+        z-index: 1;
+
+        &-delay {
+            animation-delay: 5s;
+        }
+    }
+}
+@keyframes stream-title {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
