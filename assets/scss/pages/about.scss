@@ -25,14 +25,13 @@
                 flex-direction: row;
                 justify-content: center;
                 overflow: hidden;
+                border-top: 1px solid $black;
 
                 &_item {
                     flex-basis: 100%;
                     font-size: 42px;
                     line-height: 42px;
                     letter-spacing: $base-letter_spacing;
-                    border-top: 1px solid $black;
-                    border-bottom: 1px solid $black;
                     padding: 25px;
                     text-align: center;
                     color: $transparent;
@@ -49,9 +48,30 @@
 
             &-info {
                 display: flex;
-                
+                flex-direction: column;
+                border-top: 1px solid $black;
+                border-bottom: 1px solid $black;
+                background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
+
                 &_item {
-                    border: 1px solid $black;
+                    flex-grow: 1;
+                    padding: 25px;
+
+                    img {
+                        //         width: 350px;
+                        //         height: 440px;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+
+                    &:nth-child(2) {
+                        display: none;
+                    }
+
+                    &:last-child {
+                        border-top: 1px solid $black;
+                    }
                 }
             }
         }
@@ -63,7 +83,7 @@
         gap: $grid-gap;
         margin: auto;
         min-width: 100vw;
-        margin: $grid-gap 0;
+        // margin: $grid-gap 0;
 
         .copartnership {
             width: 100%;
@@ -143,6 +163,117 @@
                 .marquee-group {
                     animation-direction: reverse;
                     animation-delay: -3s;
+                }
+            }
+        }
+    }
+}
+
+@include Mobile {
+}
+
+@include Tablet {
+}
+
+@include Laptop {
+    .about {
+        .service-wrapper {
+            .service {
+                &-content {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    overflow: hidden;
+                    border-top: 1px solid $black;
+
+                    &_item {
+                        flex-basis: 100%;
+                        font-size: 42px;
+                        line-height: 42px;
+                        letter-spacing: $base-letter_spacing;
+                        padding: 25px;
+                        text-align: center;
+                        color: $transparent;
+                        text-stroke: 2px $black;
+                        -webkit-text-stroke: 2px $black;
+
+                        &:nth-child(2) {
+                            color: $black;
+                            text-stroke: 2px $black;
+                            -webkit-text-stroke: 2px $black;
+                        }
+                    }
+                }
+
+                &-info {
+                    flex-direction: row;
+
+                    &_item {
+                        padding: 25px;
+
+                        img {
+                            width: 350px;
+                            height: 440px;
+                        }
+
+                        &:nth-child(2) {
+                            display: block;
+                            border-left: 1px solid $black;
+                            border-right: 1px solid $black;
+                        }
+
+                        &:last-child {
+                            border-top: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include Desktop {
+    .about {
+        .service-wrapper {
+            .service {
+
+                &-title {
+                    padding: 25px;
+
+                    h3,
+                    h4 {
+                        display: inline-block;
+                    }
+                }
+
+            }
+        }
+
+        .copartnership-wrapper {
+
+            .copartnership {
+
+                &-content {
+
+                    &_item {
+
+                        &:nth-child(1),
+                        &:nth-child(3) {
+                        }
+                    }
+                }
+
+                .marquee {
+
+                    &-group {
+                    }
+
+                    svg {
+                    }
+                }
+                .marquee-reverse {
+                    .marquee-group {
+                    }
                 }
             }
         }
