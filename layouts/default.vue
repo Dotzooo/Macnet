@@ -1,5 +1,5 @@
 <script setup>
-import Vue, { ref, onMounted, provide } from 'vue'
+import { ref, onMounted, provide } from 'vue'
 // import { gsap } from 'gsap'
 // import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 // import LocomotiveScroll from 'locomotive-scroll'
@@ -24,38 +24,22 @@ function cursorMove (e) {
   cursor.value.style.top = y - 15 + 'px'
 }
 
-function onSroll () {
-  // const ts = document.querySelector('[data-scroll-container]')
-  // console.log(ts)
-  // console.log(scrollContainer)
-  // const scroller = new LocomotiveScroll({
-  //   el: scrollContainer,
-  //   smooth: true
-  // })
-  // console.log(scroller)
-  // console.log(document.querySelector('[data-scroll-container]'))
-  // gsap.registerPlugin(ScrollTrigger)
+// function onScollV2 () {
+//   const scrollContainerDom = scrollContainer.value
+//   const scroller = new Vue.prototype.LocomotiveScroll({
+//     el: scrollContainerDom,
+//     smooth: true
+//     // multiplier: 0.1
+//   })
 
-  // locoScroll.on('scroll', ScrollTrigger.update)
-}
-
-function onScollV2 () {
-  const scrollContainerDom = scrollContainer.value
-  const scroller = new Vue.prototype.LocomotiveScroll({
-    el: scrollContainerDom,
-    smooth: true
-    // multiplier: 0.1
-  })
-
-  // on scroll event
-  scroller.on('scroll', (args) => {
-    // console.log(args)
-  })
-}
+//   // on scroll event
+//   scroller.on('scroll', (args) => {
+//     // console.log(args)
+//   })
+// }
 
 onMounted(() => {
-  onSroll()
-  onScollV2()
+  // onScollV2()
 })
 </script>
 

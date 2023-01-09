@@ -1,0 +1,118 @@
+.contact {
+    background-color: $black;
+    display: flex;
+    flex-direction: column;
+
+    &-pic {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &-content {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        background: $black;
+
+        &_services {
+
+            .contact_services__buttons {
+                display: flex;
+                justify-content: space-between;
+
+                button {
+                    --b: 3px; /* border thickness */
+                    --s: 0.45em; /* size of the corner */
+                    --color: #373b44;
+                    padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
+                    color: var(--color);
+                    --_p: var(--s);
+                    background: conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--color) 0) var(--_p)
+                        var(--_p) / calc(100% - var(--b) - 2 * var(--_p)) calc(100% - var(--b) - 2 * var(--_p));
+                    transition: 0.3s linear, color 0s, background-color 0s;
+                    outline: var(--b) solid #0000;
+                    outline-offset: 0.6em;
+                    border: 0;
+                    user-select: none;
+                    -webkit-user-select: none;
+                    touch-action: manipulation;
+
+                    &:hover,
+                    &:focus-visible {
+                        --_p: 0px;
+                        outline-color: var(--color);
+                        outline-offset: 0.05em;
+                    }
+
+                    &:active {
+                        background: var(--color);
+                        color: #fff;
+                    }
+                }
+            }
+
+            .contact_services__form {
+
+
+                .field {
+                    padding: 0.75rem 1rem;
+
+                    label {
+                        display: block;
+                        color: $white;
+                    }
+
+                    input,textarea {
+                        width: 100%;
+                        max-width: 600px;
+                        border-radius: 3px;
+                        -moz-border-radius: 3px;
+                        -webkit-border-radius: 3px;
+                        border: 1px solid #dcdcdc;
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include Tablet {
+    .contact {
+
+        flex-direction: row;
+
+        &-pic {
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+    }
+}
+
+
+@include Desktop {
+    .contact {
+
+        flex-direction: row;
+
+        &-pic {
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+    }
+}

@@ -200,10 +200,10 @@ export default class Sketch {
   setupCanvas () {
     this.renderer.setSize(this.width, this.height)
     // 設置設備像素比率
-    this.renderer.setPixelRatio(2.0)
+    this.renderer.setPixelRatio(3.0)
     // this.renderer.setPixelRatio(window.devicePixelRatio);
 
-    this.renderer.setClearColor(0xFFFFFF, 1.0)
+    this.renderer.setClearColor(0xFFFFFF, 5.0)
 
     // this.renderer.domElement.style.position = "fixed";
     // this.renderer.domElement.style.top = "0";
@@ -224,11 +224,15 @@ export default class Sketch {
 
     // 長度和寬度比
     // 默認採用瀏覽器  返回以像素為單位的窗口內部寬度和高度
+    // 參數1. 垂直相機的視野, 在視野以外的東西不會被選染製畫面
+    // 參數2. 相機可以看到的視野外觀比例，注意它是一個寬除高的值
+    // 參數3. 接近相機的平片, 當物件比此值更靠近畫面時, 該物件不被渲染
+    // 參數4. 遠相機的平面, 當物件與相機的距離大於此值時, 該物件不被渲染
     this.camera = new THREE.PerspectiveCamera(
-      fov,
-      this.width / this.height,
-      0.01,
-      this.dist * 5
+      fov, // 相機的垂直視野
+      this.width / this.height, // 相機的外觀比例
+      0.01, // 接近的相機視體平面距離值
+      this.dist * 5 // 遠的相機視體平面距離值
     )
 
     this.camera.position.set(0, 0, this.dist)

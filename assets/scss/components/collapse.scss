@@ -1,0 +1,44 @@
+.collapse {
+    padding: 5px;
+    box-shadow: 0 0 0 1px #333;
+    border-radius: 5px;
+    border: none;
+
+    &-title {
+        margin: 5px;
+    }
+    &-button {
+        width: 100%;
+        border: none;
+
+        &_title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 0;
+        }
+        &_icon {
+            line-height: 10px;
+
+            
+        }
+    }
+
+    &-content {
+        padding: 0 12px;
+    }
+}
+
+/* <transition name="collapse">  */
+// .collapse-leave-active,
+// .collapse-enter-active {
+//   transition: all .9s ease;
+// }
+
+// .collapse-enter-from {
+//   transform: translateY(100%);
+// }
+
+// .collapse-leave-to {
+//   transform: translateY(-100%);
+// }

@@ -1,5 +1,5 @@
 .about {
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     background-size: 40px 80px;
     background-position: center;
@@ -50,27 +50,218 @@
                 display: flex;
                 flex-direction: column;
                 border-top: 1px solid $black;
-                border-bottom: 1px solid $black;
-                background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
 
                 &_item {
                     flex-grow: 1;
-                    padding: 25px;
-
-                    img {
-                        //         width: 350px;
-                        //         height: 440px;
-                        width: 100%;
-                        height: 100%;
-                        object-fit: contain;
-                    }
+                    padding: 10px;
 
                     &:nth-child(2) {
-                        display: none;
+                        // display: none;
                     }
 
                     &:last-child {
-                        border-top: 1px solid $black;
+                        // border-top: 1px solid $black;
+                    }
+
+                    .title {
+                    }
+                }
+            }
+        }
+    }
+
+    .environment-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: $grid-gap;
+        margin: auto;
+        min-width: 100vw;
+        overflow: hidden;
+
+        .environment {
+            width: 100%;
+
+            &-title {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                overflow: hidden;
+
+                &_item {
+                    flex-basis: 100%;
+                    font-size: 42px;
+                    line-height: 42px;
+                    letter-spacing: $base-letter_spacing;
+                    border-top: 1px solid $black;
+                    border-bottom: 1px solid $black;
+                    padding: 25px;
+                    text-align: center;
+                    color: $transparent;
+                    text-stroke: 2px $black;
+                    -webkit-text-stroke: 2px $black;
+                    flex-basis: 50%;
+
+                    &:nth-child(1),
+                    &:nth-child(3) {
+                        color: $black;
+                        text-stroke: 2px $black;
+                        -webkit-text-stroke: 2px $black;
+                    }
+                }
+            }
+
+            &-content {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                overflow: hidden;
+
+                // &_item {
+                //     position: absolute;
+                //     bottom: -30px;
+                //     background-image: url("https://picsum.photos/200/300");
+                //     background-size: cover;
+                //     // transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1) translateZ(-2px);
+                //     // background-position: top center;
+                //     // width: 100vw;
+                //     // height: 100vh;
+                //     // perspective: 1px;
+                // }
+            }
+        }
+
+        .trigger-wrapper {
+            .trigger-item {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .trigger-item_image {
+                    margin: 10px 5px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .hiring-wrapper {
+        .hiring {
+            &-title {
+                padding: 25px;
+
+                h3,
+                h4 {
+                    display: inline-block;
+                }
+            }
+
+            &-content {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                overflow: hidden;
+                border-top: 1px solid $black;
+
+                &_item {
+                    flex-basis: 100%;
+                    font-size: 42px;
+                    line-height: 42px;
+                    letter-spacing: $base-letter_spacing;
+                    padding: 25px;
+                    text-align: center;
+                    color: $transparent;
+                    text-stroke: 2px $black;
+                    -webkit-text-stroke: 2px $black;
+
+                    &:nth-child(2) {
+                        color: $black;
+                        text-stroke: 2px $black;
+                        -webkit-text-stroke: 2px $black;
+                    }
+                }
+            }
+
+            &-info {
+                display: flex;
+                flex-direction: column;
+                border-top: 1px solid $black;
+
+                &_item {
+                    flex-grow: 1;
+                    padding: 10px;
+
+                    &:nth-child(2) {
+                        // display: none;
+                    }
+
+                    &:last-child {
+                        // border-top: 1px solid $black;
+                    }
+
+                    .title {
+                    }
+                }
+            }
+        }
+    }
+
+    .gallery-wrapper {
+        height: 100%;
+        min-height: 400px;
+        overflow: visible;
+        display: flex;
+        flex-direction: column;
+        overflow-y: visible;
+        position: relative;
+
+        .gallery {
+            display: flex;
+            flex-direction: row;
+            justify-self: space-between;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            overflow: hidden;
+
+            .col {
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                width: 100%;
+                align-self: flex-start;
+                justify-self: flex-start;
+                padding: 10px 5px;
+
+                &:nth-child(2) {
+                    align-self: flex-end;
+                    justify-self: flex-end;
+                }
+
+                .image {
+                    width: 100%;
+                    filter: saturate(0);
+                    padding: 5px 0;
+
+                    &:hover {
+                        filter: saturate(1);
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        transition: 0.3s ease-out;
+                        overflow: hidden;
+                        // box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                        //     0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                        //     0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
                     }
                 }
             }
@@ -116,60 +307,15 @@
                     }
                 }
             }
-
-            .marquee {
-                display: flex;
-                overflow: hidden;
-                margin: $grid-gap 0;
-                user-select: none;
-                gap: $grid-gap;
-                mask-image: linear-gradient(
-                    to right,
-                    hsl(0 0% 0% / 0),
-                    hsl(0 0% 0% / 1) 20%,
-                    hsl(0 0% 0% / 1) 80%,
-                    hsl(0 0% 0% / 0)
-                );
-                -webkit-mask-image: linear-gradient(
-                    to right,
-                    hsl(0 0% 0% / 0),
-                    hsl(0 0% 0% / 1) 20%,
-                    hsl(0 0% 0% / 1) 80%,
-                    hsl(0 0% 0% / 0)
-                );
-
-                &-group {
-                    flex-shrink: 0;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-around;
-                    gap: $grid-gap;
-                    min-width: 100%;
-                    animation: scroll-x 60s linear infinite;
-                }
-
-                svg {
-                    display: grid;
-                    place-items: center;
-                    width: clamp(10rem, 1rem + 40vmin, 30rem);
-                    fill: navy;
-                    background: #ecdcc0;
-                    aspect-ratio: 16/9;
-                    padding: calc(clamp(10rem, 1rem + 40vmin, 30rem) / 10);
-                    border-radius: 0.5rem;
-                }
-            }
-            .marquee-reverse {
-                .marquee-group {
-                    animation-direction: reverse;
-                    animation-delay: -3s;
-                }
-            }
         }
     }
 }
 
 @include Mobile {
+    .about {
+        .environment-wrapper {
+        }
+    }
 }
 
 @include Tablet {
@@ -206,24 +352,13 @@
                 }
 
                 &-info {
-                    flex-direction: row;
-
                     &_item {
-                        padding: 25px;
-
-                        img {
-                            width: 350px;
-                            height: 440px;
-                        }
+                        padding: 20px;
 
                         &:nth-child(2) {
-                            display: block;
-                            border-left: 1px solid $black;
-                            border-right: 1px solid $black;
                         }
 
                         &:last-child {
-                            border-top: none;
                         }
                     }
                 }
@@ -236,7 +371,6 @@
     .about {
         .service-wrapper {
             .service {
-
                 &-title {
                     padding: 25px;
 
@@ -245,34 +379,16 @@
                         display: inline-block;
                     }
                 }
-
             }
         }
 
         .copartnership-wrapper {
-
             .copartnership {
-
                 &-content {
-
                     &_item {
-
                         &:nth-child(1),
                         &:nth-child(3) {
                         }
-                    }
-                }
-
-                .marquee {
-
-                    &-group {
-                    }
-
-                    svg {
-                    }
-                }
-                .marquee-reverse {
-                    .marquee-group {
                     }
                 }
             }
