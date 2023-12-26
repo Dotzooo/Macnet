@@ -2,7 +2,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     // 網頁標題
-    title: '悅慶資訊 | Macnet',
+    title: 'ADAM | ADAM',
     htmlAttrs: {
       // 中文網頁
       lang: 'zh-Hant'
@@ -12,7 +12,7 @@ export default {
       // RWD
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       // 網頁描述
-      { hid: 'description', name: 'description', content: '悅慶資訊成立於西元1998年，主要以電腦軟硬體、系統整合、軟體開發、網頁開發、企業產品開發、資訊管理專業顧問，服務領域主要為金融、產險、壽險、公部門、電商平台、醫療系統、科技產業等等大型企業。' },
+      { hid: 'description', name: 'description', content: 'ADAM成立於西元1999年。' },
       { name: 'format-detection', content: 'telephone=no' },
       // 作者
       { name: 'author', content: 'Macnet' },
